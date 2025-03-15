@@ -1,4 +1,5 @@
 #!/bin/bash
+solana config get
 
 read -p "Enter Prefix for random Wallet Address 3 char: " Wallet_prefix
 export Wallet_prefix="$Wallet_prefix"
