@@ -20,7 +20,9 @@ echo "Token mint Supply: $Token_mintSupply"
 echo "Token Metadata URI: $Token_Uri"
 
 solana-keygen grind --starts-with $Wallet_prefix:1
-sudo chmod 776 *.*
+
+sudo chmod 777 *.*
+
 # List JSON files and store in a variable
 export JSON_FILES=$(ls $Wallet_prefix*.json)
 
