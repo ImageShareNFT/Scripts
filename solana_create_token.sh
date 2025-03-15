@@ -1,8 +1,10 @@
 #!/bin/bash
 solana config get
-
+echo "Solana ready to run?"
 read -r -p "Check the Specifies the Solana cluster (e.g., devnet, testnet, mainnet-beta) Are you sure? (Y/N): " choice; echo "You entered: $choice"
+
 choice="${choice//[$'\t\r\n ']}" # Trims whitespace
+
 case "$choice" in
   [yY] )
     echo "Confirmed."
@@ -10,7 +12,6 @@ case "$choice" in
     ;;
   [nN] )
     echo "Cancelled."
-    # Place your commands here for the 'no' case or exit
     exit 1
     ;;
   * )
