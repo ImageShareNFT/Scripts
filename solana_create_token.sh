@@ -1,9 +1,12 @@
 #!/bin/bash
 solana config get
 echo "Solana ready to run?"
-read -r -p "Check the Specifies the Solana cluster (e.g., devnet, testnet, mainnet-beta) Are you sure? (Y/N): " choice; echo "You entered: $choice"
 
-choice="${choice//[$'\t\r\n ']}" # Trims whitespace
+read -p "You ready to create token on Solana ready to run? " yes_or_no
+read -r -p "Check the Specifies the Solana cluster (e.g., devnet, testnet, mainnet-beta) Are you sure? (Y/N): " choice;choice="${choice//[$'\t\r\n ']}" # Trims whitespace
+
+echo "You entered: $choice"
+
 
 case "$choice" in
   [yY] )
