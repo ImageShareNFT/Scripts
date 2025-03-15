@@ -1,6 +1,24 @@
 #!/bin/bash
 solana config get
+read -p "Check the Specifies the Solana cluster (e.g., devnet, testnet, mainnet-beta) Are you sure? (Y/N): " choice
 
+case "$choice" in
+  [yY] )
+    echo "Confirmed."
+    # Place your commands here for the 'yes' case
+    ;;
+  [nN] )
+    echo "Cancelled."
+    # Place your commands here for the 'no' case or exit
+    exit 1
+    ;;
+  * )
+    echo "Invalid input. Please enter Y or N."
+    exit 1
+    ;;
+esac
+
+# Continue with the rest of your script
 read -p "Enter Prefix for random Wallet Address 3 char: " Wallet_prefix
 export Wallet_prefix="$Wallet_prefix"
 read -p "Enter the Token Name: " Token_name
