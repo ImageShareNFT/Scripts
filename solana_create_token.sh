@@ -1,7 +1,8 @@
 #!/bin/bash
 solana config get
 
-read -r -p "Check the Specifies the Solana cluster (e.g., devnet, testnet, mainnet-beta) Are you sure? (Y/N): " choice
+read -r -p "Check the Specifies the Solana cluster (e.g., devnet, testnet, mainnet-beta) Are you sure? (Y/N): " choice ; echo "You entered: $choice"
+choice="${choice//[$'\t\r\n ']}" # Trims whitespace
 case "$choice" in
   [yY] )
     echo "Confirmed."
@@ -12,7 +13,7 @@ case "$choice" in
     # Place your commands here for the 'no' case or exit
     exit 1
     ;;
-  #* )
+  * )
   #  echo "Invalid input. Please enter Y or N."
   #  exit 1
   #  ;;
