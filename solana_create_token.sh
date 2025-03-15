@@ -1,5 +1,7 @@
 #!/bin/bash
 
+read -p "Enter Prefix for random Wallet Address 3 char: " Wallet_prefix
+export Wallet_prefix="$Wallet_prefix"
 read -p "Enter the Token Name: " Token_name
 export Token_name="$Token_name"
 read -p "Enter the Token Symbol: " Token_Symbol
@@ -17,10 +19,10 @@ echo "Token Decimals: $Token_Decimals"
 echo "Token mint Supply: $Token_mintSupply"
 echo "Token Metadata URI: $Token_Uri"
 
-solana-keygen grind --starts-with ${Token_Symbol:0:3}:1
+solana-keygen grind --starts-with $Wallet_prefix:1
 
 # List JSON files and store in a variable
-export JSON_FILES=$(ls ${Token_Symbol:0:3}*.json)
+export JSON_FILES=$(ls $Wallet_prefix*.json)
 
 # Display the list of files
 echo "Authority Keypair: $JSON_FILES"
