@@ -12,10 +12,10 @@ case "$choice" in
     # Place your commands here for the 'no' case or exit
     exit 1
     ;;
-  * )
-    echo "Invalid input. Please enter Y or N."
-    exit 1
-    ;;
+  #* )
+  #  echo "Invalid input. Please enter Y or N."
+  #  exit 1
+  #  ;;
 esac
 
 # Continue with the rest of your script
