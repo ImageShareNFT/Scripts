@@ -1,7 +1,7 @@
 #!/bin/bash
 solana config get
-read -r -p "Check the Specifies the Solana cluster (e.g., devnet, testnet, mainnet-beta) Are you sure? (Y/N): " choice
 
+read -r -p "Check the Specifies the Solana cluster (e.g., devnet, testnet, mainnet-beta) Are you sure? (Y/N): " choice
 case "$choice" in
   [yY] )
     echo "Confirmed."
