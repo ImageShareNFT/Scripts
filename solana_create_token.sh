@@ -75,3 +75,4 @@ spl-token create-account $filename
 spl-token mint $filename $Token_mintSupply
 
 done
+#update at 16/03/2568 06:54 
